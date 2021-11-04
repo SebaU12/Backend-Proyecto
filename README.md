@@ -13,6 +13,21 @@
 ## Motivación
 Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarrollo esta aplicación web con el fin de dar facilidad a las personas que quieran iniciar su negocio y/o facilitar al usuario el poder adquirir producctos de algún restaurante. 
 
+
+## Funcionalidades
+
+| Angular Route | Backend URLs | Funcionalidad |
+| --- | --- | --- |
+| ` ` | `GET /user/permission` | Recopila el permiso que tiene el usuario | 
+| ` ` | `GET /user_admin/permission` | Recopila el permiso que tiene el admin | 
+| `/home` | `GET /restaurants` | Recopila todos los restaurantes | 
+| `/auth` | `POST /user/login` | Realizar login de un usuario | 
+| `/auth` | `POST /user_admin/login` | Realizar login de un admin | 
+| `/auth` | `POST /user/sign-up` | Realizar registro de un usuario | 
+| `/auth` | `POST /user_admin/sign-up` | Realizar registro de un admin | 
+| `/menu/:id` | `GET /menu/+id` | Ver los menus que tiene el restaurante | 
+| `/menu/:id` | `POST /pedido/user` | Realiza un pedido y se guarda en el historial del usuario | 
+
 ## Instalación
 
 ### Base de datos
