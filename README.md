@@ -18,8 +18,8 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 
 | Angular Route | Backend URLs | Funcionalidad |
 | --- | --- | --- |
-| ` ` | `GET /user/permission` | Recopila el permiso que tiene el usuario | 
-| ` ` | `GET /user_admin/permission` | Recopila el permiso que tiene el admin | 
+| `/home` | `GET /user/permission` | Recopila el permiso que tiene el usuario | 
+| `/home` | `GET /user_admin/permission` | Recopila el permiso que tiene el admin | 
 | `/home` | `GET /restaurants` | Recopila todos los restaurantes | 
 | `/auth` | `POST /user/login` | Realizar login de un usuario | 
 | `/auth` | `POST /user_admin/login` | Realizar login de un admin | 
@@ -27,6 +27,7 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 | `/auth` | `POST /user_admin/sign-up` | Realizar registro de un admin | 
 | `/menu/:id` | `GET /menu/+id` | Ver los menus que tiene el restaurante | 
 | `/menu/:id` | `POST /pedido/user` | Realiza un pedido y se guarda en el historial del usuario | 
+| `/menu/:id` | `GET /menu/+idr+/+idm` | Realiza la busqueda de un menu especifico usando la id del restaurante (idr) y el id del menu (idm) | 
 
 ## Instalación
 
