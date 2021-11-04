@@ -64,4 +64,14 @@ export class MyRestaurantComponent implements OnInit {
             window.location.href= window.location.origin + "#/home"; 
         })
     }
+
+    eliminarR(){
+        var opciones = confirm("¿Estas seguro que quieres eliminar tu restaurante?")
+        if(opciones == true){
+            this.intranetService.deleteRestaurant().subscribe(result => {}, error => console.log(error))
+            const value: string = this.cookieService.get('token');
+            this.cookieService.delete('token');
+            window.location.href= window.location.origin + "#/auth"; 
+        }
+    }
 }

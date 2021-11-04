@@ -22,3 +22,4 @@
 
 <button *ngIf="isRegx" [routerLink]="['/admin/patchR']">Modificar Restaurante</button>
 <button *ngIf="isRegx" [routerLink]="['/admin/mis-menus']">Modificar menu</button>
+<button *ngIf="isRegx" (click)="eliminarR()">Elimnitar restaurante</button>

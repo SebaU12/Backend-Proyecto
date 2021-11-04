@@ -129,6 +129,30 @@ export class IntranetService{
         )
     }
 
+    deleteAdmin(): Observable<any>{
+        return this.http.delete(`${baseUrl}user_admin/destroy`).pipe(
+            catchError(this.handleError)
+        )
+    }
+
+    deleteUser(): Observable<any>{
+        return this.http.delete(`${baseUrl}user/destroy`).pipe(
+            catchError(this.handleError)
+        )
+    }
+
+    deleteRestaurant(): Observable<any>{
+        return this.http.delete(`${baseUrl}restaurants/`).pipe(
+            catchError(this.handleError)
+        )
+    }
+
+    deleteMenu(id: number): Observable<any>{
+        return this.http.delete(`${baseUrl}menu/`+id).pipe(
+            catchError(this.handleError)
+        )
+    }
+
     private handleError(error: Response) {
         console.log(error);
         const msg = "Error status code" + error.status + "status" + error.statusText;

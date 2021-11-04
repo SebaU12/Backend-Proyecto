@@ -23,6 +23,7 @@
 </div>
 
 <div *ngIf="visible">
+    <button (click)="deleteMenu()">Eliminar menu</button>
     <div *ngIf="!form">
         <input type="file" (change)="onFileSelected($event)">
         <button type="button" (click)="postImage()">Guardar con imagen</button>

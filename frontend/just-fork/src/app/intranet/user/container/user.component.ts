@@ -17,7 +17,7 @@ export class MyComponent implements OnInit {
     cambiar: boolean = true; 
     formGroup: FormGroup | any;
     user: any = 0;
-    permiso: number = 0;
+    permiso: number | any;
     email: string = ""; 
     
     constructor(private intranetService: IntranetService, private http: HttpClient, private cookieService: CookieService) {}
@@ -50,7 +50,7 @@ export class MyComponent implements OnInit {
                 this.formGroup.value.email = undefined
             }
             if(this.formGroup.value.password == this.formGroup.value.cpassword){
-                if(this.permiso == 0){
+                if(this.permiso.permiso == 0){
                     this.intranetService.PatchUserData(this.formGroup.value).subscribe(result => {
                         if(result){
                             console.log(result);
@@ -109,5 +109,19 @@ export class MyComponent implements OnInit {
         const value: string = this.cookieService.get('token');
         this.cookieService.delete('token');
         window.location.href= window.location.origin + "#/home"; 
-      }
+    }
+
+    eliminarCuenta(){
+        var opciones = confirm("¿Estas seguro que quieres eliminar tu cuenta?")
+        if(opciones == true){
+            if(this.permiso.permiso == 1){
+                this.intranetService.deleteAdmin().subscribe(result => {}, error => console.log(error))
+            }else{
+                this.intranetService.deleteUser().subscribe(result => {}, error => console.log(error))
+            }
+            const value: string = this.cookieService.get('token');
+            this.cookieService.delete('token');
+            window.location.href= window.location.origin + "#/home"; 
+        }
+    }
 }

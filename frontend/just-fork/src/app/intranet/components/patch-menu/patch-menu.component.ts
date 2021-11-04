@@ -122,5 +122,13 @@ export class PatchMenusComponent implements OnInit {
             })
         }
     }
+
+    deleteMenu(){
+        var opciones = confirm("¿Estas seguro que quieres eliminar tu menu?")
+        if(opciones == true){
+            this.intranetService.deleteMenu(this.menuId).subscribe(result => {}, error => console.log(error))
+            window.location.href= window.location.origin + "#/admin/all-menus"; 
+        }
+    }
     
 }
