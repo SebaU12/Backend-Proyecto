@@ -43,14 +43,17 @@ npm install
 npm install -g nodemon
 ```
 2. Iniciar el proyecto
+
 `npm start`
 
 ### Frontend
 
 1. Instalar dependencias
+
 `npm install`
 
 2. Iniciar el proyecto
+
 `ng serve --open`
 
 
