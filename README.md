@@ -2,7 +2,7 @@
 ## Proyecto Just Fork 
 
 ## Integrantes: 
-- Yago Silva @YagoSilvaA [github](https://github.com/YagoSilvaA)
+- Yago Silva @YagoSilvaA [github](https://github.com/YagoSilvaA) (En honor)
 - Ian Cortez @IanCortez [github](https://github.com/IanCortez)
 - Sebastián Lizárraga @SebaU12 [github](https://github.com/SebaU12)
 
