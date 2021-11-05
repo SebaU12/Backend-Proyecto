@@ -53,16 +53,7 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 ## Instalación
 
 ### Base de datos
-#### Primera forma
-1. Abrir MySQL
-2. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
-- Usuario: `utec`
-- Clave: `1234567890`
-3. Ejecutar los comandos ubicados en `just_fork.sql`
-4. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
-5. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
-
-#### Segunda forma
+## Configuración
 1. Abrir MySQL
 2. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
 - Usuario: `utec`
@@ -70,7 +61,8 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 3. En MySQL usar el comando: `CREATE DATABASE just_fork`
 4. Entrar al archivo `config.json`, ubicado en la carpeta  `backend/config/`
 5. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
-6. ingresar el comando `npx sequelize-cli db:migrate`
+6. Ingresar el comando `npx sequelize-cli db:migrate`
+7. Si se desea información más detallada de la base de datos lea `just_fork.sql` o revise dentro del backend `migrations` y `models` 
 
 ### Backend
 1. Ingresar a la carpeta `backend/`
