@@ -85,4 +85,5 @@ npm install -g nodemon
 
 `ng serve --open`
 
-
+### Avisos
+En caso la pagina se quede congelada por un tiempo, reinicie la pagina desde el navegador, no es necesario parar el servidor
