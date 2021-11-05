@@ -1,20 +1,27 @@
-<h3>Formulario de post restaurant</h3>
-
-<h4>Si algún dato lo quieres cambiar en un futuro, lo puedes hacer</h4>
-<div *ngIf="form">
-    <form [formGroup]="formGroup" (ngSubmit)="moverForm()">
-        <div>
-            <input type="text" placeholder="nombre" formControlName="restaurant_name">
-        </div>
-        <div>
-            <input type="text" placeholder="ubication" formControlName="ubication">
-        </div>
-        <button type="submit">Siguiente</button>
-    </form>
+<app-navI></app-navI>
+<div class="text-container">
+    <h2>Si algún dato lo quieres cambiar en un futuro, lo puedes hacer</h2>
 </div>
-<div *ngIf="!form">
+
+<div class="cobertor-crear">
+    <div class="crear" *ngIf="form">
+        <form [formGroup]="formGroup" (ngSubmit)="moverForm()">
+            <div>
+                <input type="text" placeholder="nombre" formControlName="restaurant_name">
+            </div>
+            <div>
+                <input type="text" placeholder="ubication" formControlName="ubication">
+            </div>
+            <button class="btn" type="submit">Siguiente</button>
+        </form>
+    </div>
+</div>
+
+<div style="text-align: center;" *ngIf="!form">
     <input type="file" (change)="onFileSelected($event)">
-    <button type="button" (click)="postImage()">Guardar con imagen</button>
-    <button type="button" (click)="postRestaurant()">Guardar sin imagen</button>
-    <button (click)="moverForm()">Volver</button>
+    <br>
+    <button class="btn" type="button" (click)="postImage()">Guardar con imagen</button>
+    <button class="btn" type="button" (click)="postRestaurant()">Guardar sin imagen</button>
+    <br>
+    <button class="btn" (click)="moverForm()">Volver</button>
 </div>

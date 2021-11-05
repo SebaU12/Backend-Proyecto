@@ -4,6 +4,7 @@
 
 <div *ngIf="visual">
     <app-nav></app-nav>
+    <h2>¿Qué quieres pedir?</h2>
 </div>
 
 <div *ngIf="visualCompra && visual" class="all">
@@ -16,13 +17,14 @@
         </div>
         <div class="container">
             <h3>{{m.menu_name}}</h3>
-            <h4>{{m.precio}}</h4>
+            <h4>S/.{{m.precio}}</h4>
         </div>
-        <button (click)="aumentar(m.id, m.precio)">aumentar</button>
-        <button (click)="descartar(m.id, m.precio)">eliminar</button>
+        <button class="btn" (click)="aumentar(m.id, m.precio)">Aumentar</button>
+        <button class="btn" (click)="descartar(m.id, m.precio)">Eliminar</button>
     </div>
 </div>
 
+<!--
 <div *ngIf="menu_compilado">
     <div class="all">
         <div class="card" *ngFor="let c of compilador">
@@ -35,18 +37,41 @@
 
             <div class="container">
                 <h3>{{c.menu_name}}</h3>
-                <h4>{{c.precio}}</h4>
+                <h4>S/.{{c.precio}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<div *ngIf="menu_compilado" class="cuadrar">
+    <div class="card2" *ngFor="let c of compilador">
+        <div class="card3">
+            <div *ngIf="c.imageUrl" class="img-container">
+                <img class="img-restaurant" [src]="'http://'+c.imageUrl">
+            </div>
+            <div *ngIf="!c.imageUrl" class="img-container">
+                <img class="img-restaurant" [src]="image_default">
+            </div>
+            <div class="containerR">
+                <h3>Nombre del plato:</h3>
+                <h4>{{c.menu_name}}</h4>
+                <br>
+                <h3>Precios</h3>
+                <h4>S/.{{c.precio}}</h4>
+                <br>
             </div>
         </div>
     </div>
 </div>
 
-<div *ngIf="visualCompra && visual">
-    <h3>{{cantidad}}</h3>
-    <button (click)="canBuy()">Buy</button>
+
+<div class="seccion-compra" *ngIf="visualCompra && visual">
+    <h4 class="cant">Cantidad {{cantidad}}</h4>
+    <button class="new-btn" (click)="canBuy()">Buy</button>
 </div>
 
-<div *ngIf="!visualCompra && visual">
-    <button (click)="confirmar()">Confirmal</button>
-    <button (click)="return()">Volver</button>
+<div class="seccion-confirmacion" *ngIf="!visualCompra && visual">
+    <button class="new-btn" (click)="confirmar()">Confirmar</button>
+    <button class="new-btn" (click)="return()">Volver</button>
 </div>

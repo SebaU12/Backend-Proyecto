@@ -1,10 +1,14 @@
 <div *ngIf="!isRegx" id="spinn">
     <img src="../../../../assets/img/spinner-gif.gif">
 </div>
+
+
 <div *ngIf="isRegx">
     <app-navI></app-navI>
-    <h1>Pestaña sobre el restaurante</h1>
+    <h2>Este es tu querido restaurante</h2>
 </div>
+
+
 <div *ngIf="isRegx" class="all">
     <div class="card">
         <div *ngIf="restaurants.imageUrl">
@@ -13,6 +17,7 @@
         <div *ngIf="!restaurants.imageUrl">
             <img class="img-restaurant" [src]="image_default">
         </div>
+        <hr>
         <div class="container">
             <h4>{{restaurants.restaurant_name}}</h4>
             <p>{{restaurants.ubication}}</p>
@@ -20,6 +25,9 @@
     </div>
 </div>
 
-<button *ngIf="isRegx" [routerLink]="['/admin/patchR']">Modificar Restaurante</button>
-<button *ngIf="isRegx" [routerLink]="['/admin/mis-menus']">Modificar menu</button>
-<button *ngIf="isRegx" (click)="eliminarR()">Elimnitar restaurante</button>
+
+<div class="botones-mod">
+    <button class="btn" *ngIf="isRegx" [routerLink]="['/admin/patchR']">Modificar restaurante</button>
+    <button class="btn" *ngIf="isRegx" [routerLink]="['/admin/mis-menus']">Modificar menu</button>
+    <button class="btn" *ngIf="isRegx" (click)="eliminarR()">Eliminar restaurante</button>
+</div>

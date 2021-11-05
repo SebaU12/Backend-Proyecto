@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    color: #1FB78E;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
+}
+
 body {
     background-color: #f7f3f2;
 }
@@ -15,7 +24,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 100vh;
     margin: auto;
 }
 
@@ -23,7 +31,7 @@ body {
     width: 330px;
     height: 360px;
     border-radius: 8px;
-    background: blue;
+    background: #c1aa8a;
     box-shadow: 3px 5px 5px rgba($color: #032033, $alpha: 0.5);
     overflow: hidden;
     margin: 20px;
@@ -34,6 +42,13 @@ body {
 .all .card:hover {
     transform: translateY(-10px);
     box-shadow: 3px 12px 16px rgba($color: #032033, $alpha: 0.5);
+    cursor: pointer;
+}
+
+.all .card hr {
+    height: 2px;
+    background-color: black;
+    border: none;
 }
 
 .img-restaurant {

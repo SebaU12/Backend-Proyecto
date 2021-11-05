@@ -1,0 +1,32 @@
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    color: #1FB78E;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
+}
+
+div.general {
+    margin: 10px 25px;
+}
+
+button.btn {
+    text-align: center;
+    appearance: none;
+    background-color: #d3cfce;
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 20%;
+    margin: 8px 5px;
+}
+
+button.btn:hover {
+    background-color: #a1abe2;
+}
+
+div.sub-div {
+    text-align: center;
+}

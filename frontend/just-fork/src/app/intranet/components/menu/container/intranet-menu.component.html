@@ -1,14 +1,21 @@
 <app-navI></app-navI>
-<h1>Intranet Menu Component</h1>
+<h2>¿Quieres modificar algo del menu de tu restaurante?</h2>
 
-<div *ngIf="btn_bool">
-    <button (click)="changeBtn()">Agregar un Menu</button>
+<div class="general">
+
+    <div style="text-align: center;" *ngIf="btn_bool">
+        <button class="btn" (click)="changeBtn()">Agregar un Menu</button>
+    </div>
+
+    <div style="text-align: center;" *ngIf="!btn_bool">
+        <app-post-menu></app-post-menu>
+        <button class="btn" (click)="changeBtn()">Cerrar formulario</button>
+    </div>
+
+
+    <div class="sub-div">
+        <button class="btn" [routerLink]="['/admin/all-menus']">Modificar Menu</button>
+
+        <button class="btn" [routerLink]="['/admin/mi-restaurante']">Volver</button>
+    </div>
 </div>
-<div *ngIf="!btn_bool">
-    <app-post-menu></app-post-menu>
-    <button (click)="changeBtn()">Cerrar formulario</button>
-</div>
-
-<button [routerLink]="['/admin/all-menus']">Modificar Menu</button>
-
-<button [routerLink]="['/admin/mi-restaurante']">Volver</button>

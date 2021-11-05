@@ -5,6 +5,7 @@
 
 <div *ngIf="visual">
     <app-navI></app-navI>
+    <h2>Has click y a cambiar un menu</h2>
 </div>
 
 <div *ngIf="visual" class="all">
@@ -17,11 +18,11 @@
         </div>
         <div class="container">
             <h3>{{m.menu_name}}</h3>
-            <h4>{{m.precio}}</h4>
+            <h4>S/.{{m.precio}}</h4>
         </div>
     </div>
 </div>
 
-<div *ngIf="visual">
-    <button [routerLink]="['/admin/mis-menus']">Volver</button>
+<div class="button-center" *ngIf="visual">
+    <button class="btn" [routerLink]="['/admin/mis-menus']">Volver</button>
 </div>

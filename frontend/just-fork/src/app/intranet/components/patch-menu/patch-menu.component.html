@@ -2,12 +2,12 @@
     <img src="../../../../assets/img/spinner-gif.gif">
 </div>
 
-<div *ngIf="visible">
+<div class="externos" *ngIf="visible">
     <app-navI></app-navI>
-    <h1>Hola Patch</h1>
+    <h2>¿Es hora de actualizar el menu?</h2>
 </div>
 
-<div *ngIf="visible">
+<div style="text-align: center;" *ngIf="visible">
     <div *ngIf="form">
         <form [formGroup]="myGroup" (ngSubmit)="moverForm()">
             <div>
@@ -16,18 +16,24 @@
             <div>
                 <input type="number" placeholder="precio" formControlName="precio">
             </div>
-            <button type="submit ">Siguiente</button>
+            <button class="btn" type="submit">Siguiente</button>
         </form>
     </div>
-    <button [routerLink]="['/admin/all-menus']">Volver</button>
+
 </div>
 
-<div *ngIf="visible">
-    <button (click)="deleteMenu()">Eliminar menu</button>
+<div style="text-align: center;" *ngIf="visible">
     <div *ngIf="!form">
         <input type="file" (change)="onFileSelected($event)">
-        <button type="button" (click)="postImage()">Guardar con imagen</button>
-        <button type="button" (click)="patchMenu()">Guardar sin imagen</button>
-        <button (click)="moverForm()">Volver</button>
+        <br>
+        <button class="btn" type="button" (click)="postImage()">Guardar con imagen</button>
+        <button class="btn" type="button" (click)="patchMenu()">Guardar sin imagen</button>
+        <br>
+        <button class="btn" (click)="moverForm()">Volver</button>
     </div>
+</div>
+
+<br>
+<div style="text-align: center;" *ngIf="visible">
+    <button class="btn" [routerLink]="['/admin/all-menus']">Volver al menu</button>
 </div>

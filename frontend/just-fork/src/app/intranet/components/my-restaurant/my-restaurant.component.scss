@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f7f3f2;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    color: #1FB78E;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
+}
+
 #spinn {
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +44,7 @@
     width: 330px;
     height: 360px;
     border-radius: 8px;
-    background: blue;
+    background: #c1aa8a;
     box-shadow: 3px 5px 5px rgba($color: #032033, $alpha: 0.5);
     overflow: hidden;
     margin: 20px;
@@ -44,6 +57,12 @@
     box-shadow: 3px 12px 16px rgba($color: #032033, $alpha: 0.5);
 }
 
+.all .card hr {
+    height: 2px;
+    background-color: black;
+    border: none;
+}
+
 .img-restaurant {
     width: 330px;
     height: 260px;
@@ -51,4 +70,24 @@
 
 .card .container {
     margin-top: 35px;
+}
+
+div.botones-mod {
+    text-align: center;
+}
+
+button.btn {
+    text-align: center;
+    appearance: none;
+    background-color: #d3cfce;
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 0 5px;
+    width: 15%;
+}
+
+button:hover {
+    background-color: #a1abe2;
 }

@@ -1,0 +1,66 @@
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    color: #1FB78E;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
+}
+
+button.btn {
+    text-align: center;
+    appearance: none;
+    background-color: #d3cfce;
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 40%;
+    margin: 8px 5px;
+}
+
+button.btn:hover {
+    background-color: #a1abe2;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+input[type=number] {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+input[type=file] {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+
+div.text-container {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.cobertor-crear {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+}
+
+div.crear {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    border: 2px groove rgb(75, 74, 74);
+    background-color: #f7f3f2;
+}

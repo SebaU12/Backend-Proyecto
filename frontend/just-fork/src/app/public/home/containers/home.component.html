@@ -4,6 +4,7 @@
 
 <div *ngIf="visual">
     <app-nav></app-nav>
+    <h2>Aqui encontraras los restaurantes</h2>
 </div>
 
 
@@ -15,8 +16,10 @@
         <div *ngIf="!r.imageUrl">
             <img class="img-restaurant" [src]="image_default">
         </div>
+        <hr>
         <div class="container">
             <h4>{{r.restaurant_name}}</h4>
+            <p>{{r.ubication}}</p>
         </div>
     </div>
 </div>

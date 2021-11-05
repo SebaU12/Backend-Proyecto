@@ -1,4 +1,4 @@
-<h1>Menu Component</h1>
+<h4>Formulario para agregar un nuevo menu</h4>
 <div *ngIf="form">
     <form [formGroup]="formGroup" (ngSubmit)="moverForm()">
         <div>
@@ -7,13 +7,15 @@
         <div>
             <input type="number" placeholder="precio" formControlName="precio">
         </div>
-        <button type="submit">Siguiente</button>
+        <button class="btn" type="submit">Siguiente</button>
     </form>
 </div>
 
 <div *ngIf="!form">
-    <input type="file" (change)="onFileSelected($event)">
-    <button type="button" (click)="postImage()">Guardar con imagen</button>
-    <button type="button" (click)="postMenus()">Guardar sin imagen</button>
-    <button (click)="moverForm()">Volver</button>
+    <input type="file" (change)="onFileSelected($event)"> <br>
+    <button class="btn" type="button" (click)="postImage()">Guardar con imagen</button>
+    <button class="btn" type="button" (click)="postMenus()">Guardar sin imagen</button>
+    <br>
+    <button class="btn" (click)="moverForm()">Volver</button>
 </div>
+<br>

@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    color: #1FB78E;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
+}
+
+.cant {
+    font-family: 'Zen Old Mincho', serif;
+    text-align: center;
+    font-size: 24px;
+    color: #c08432
+}
+
 .all {
     width: 100%;
     display: flex;
@@ -39,4 +55,102 @@
 #spinn img {
     width: 250px;
     height: 250px;
+}
+
+button.btn {
+    text-align: center;
+    appearance: none;
+    background-color: #d3cfce;
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 40%;
+    margin: 8px 5px;
+}
+
+button.btn:hover {
+    background-color: #a1abe2;
+}
+
+button.new-btn {
+    text-align: center;
+    appearance: none;
+    background-color: #d3cfce;
+    padding: 5px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 10%;
+    margin: 8px 5px;
+}
+
+button.new-btn:hover {
+    background-color: #a1abe2;
+}
+
+div.seccion-compra {
+    text-align: center;
+}
+
+div.seccion-confirmacion {
+    text-align: center;
+}
+
+div.elementos-compra {
+    text-align: center;
+}
+
+//En proceso
+.cuadrar {
+    padding-top: 20px;
+    padding-left: 25%;
+}
+
+.card2 {
+    width: 650px;
+    height: 250px;
+    background-color: #c08432;
+    box-shadow: 0 1.4rem 8rem rgba($color: #000000, $alpha: 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: .8rem;
+    margin-bottom: 50px;
+}
+
+.img-container {
+    position: relative;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 200px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: translateY(105px);
+    border-radius: .8rem;
+}
+
+.containerR h3 {
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    margin-left: 150%;
+    transform: translateY(-110px);
+    color: white;
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 22px;
+}
+
+.containerR h4 {
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    margin-left: 150%;
+    transform: translateY(-110px);
+    color: rgb(70, 70, 70);
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 22px;
 }

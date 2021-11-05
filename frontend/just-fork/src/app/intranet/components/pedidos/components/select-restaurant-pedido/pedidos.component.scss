@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    color: #1FB78E;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
+}
+
 .all {
     width: 100%;
     display: flex;
@@ -16,16 +25,30 @@
     width: 200px;
     height: 230px;
     border-radius: 8px;
-    background: green;
+    background: #c1aa8a;
     box-shadow: 3px 5px 5px rgba($color: #032033, $alpha: 0.5);
     overflow: hidden;
     margin: 20px;
     text-align: center;
 }
 
+.all .card:hover {
+    cursor: pointer;
+}
+
+.all .card hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+}
+
 .img-restaurant {
     width: 200px;
     height: 150px;
+}
+
+.card .container {
+    margin-top: 35px;
 }
 
 #spinn {

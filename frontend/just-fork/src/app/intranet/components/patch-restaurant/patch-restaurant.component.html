@@ -2,13 +2,13 @@
     <img src="../../../../assets/img/spinner-gif.gif">
 </div>
 
-<div *ngIf="visual">
+<div class="externos" *ngIf="visual">
     <app-navI></app-navI>
-    <h3>Formulario de patch restaurant</h3>
+    <h4>Aqui puedes cambiar los datos importantes de tu restaurante</h4>
 </div>
 
 <div *ngIf="visual">
-    <div *ngIf="form">
+    <div class="formulario" *ngIf="form">
         <form [formGroup]="patchGroup" (ngSubmit)="moverForm()">
             <div>
                 <input type="text" placeholder="nombre" formControlName="restaurant_name">
@@ -16,16 +16,21 @@
             <div>
                 <input type="text" placeholder="ubication" formControlName="ubication">
             </div>
-            <button type="submit">Siguiente</button>
+            <button class="btn" type="submit">Siguiente</button>
         </form>
     </div>
 
-    <div *ngIf="!form">
+    <div class="images-form" *ngIf="!form">
         <input type="file" (change)="onFileSelected($event)">
-        <button type="button" (click)="postImage()">Guardar con imagen</button>
-        <button type="button" (click)="patchRestaurant()">Guardar sin imagen</button>
-        <button (click)="moverForm()">Volver</button>
+        <br>
+        <button class="btn" type="button" (click)="postImage()">Guardar con imagen</button>
+        <button class="btn" type="button" (click)="patchRestaurant()">Guardar sin imagen</button>
+        <br>
+        <button class="btn" (click)="moverForm()">Volver</button>
     </div>
+    <br>
 
-    <button [routerLink]="['/admin/mi-restaurante']">Volver a mi restaurante</button>
+    <div style="text-align: center;">
+        <button class="btn" [routerLink]="['/admin/mi-restaurante']">Volver a mi restaurante</button>
+    </div>
 </div>

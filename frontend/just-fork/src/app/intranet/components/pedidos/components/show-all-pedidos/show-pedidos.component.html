@@ -4,22 +4,25 @@
 
 <div *ngIf="visual">
     <app-navI></app-navI>
-    <h1>Mostrar Pedido con info {{pedidoId}}</h1>
+    <h2>Esto es lo que pediste aquel día</h2>
 </div>
 
-<div *ngIf="visual">
-    <div class="all">
-        <div class="card" *ngFor="let c of compilador">
-            <div *ngIf="c.imageUrl">
+<div *ngIf="visual" class="cuadrar">
+    <div class="card" *ngFor="let c of compilador">
+        <div class="card2">
+            <div *ngIf="c.imageUrl" class="img-container">
                 <img class="img-restaurant" [src]="'http://'+c.imageUrl">
             </div>
-            <div *ngIf="!c.imageUrl">
+            <div *ngIf="!c.imageUrl" class="img-container">
                 <img class="img-restaurant" [src]="image_default">
             </div>
-
             <div class="container">
-                <h3>{{c.menu_name}}</h3>
-                <h4>{{c.precio}}</h4>
+                <h3>Nombre del plato:</h3>
+                <h4>{{c.menu_name}}</h4>
+                <br>
+                <h3>Precios</h3>
+                <h4>S/.{{c.precio}}</h4>
+                <br>
             </div>
         </div>
     </div>
@@ -28,7 +31,10 @@
 <div *ngIf="visual">
     <h2>Estos son los pedidos</h2>
     <div class="all">
-        <h3>{{pedido.monto}}</h3>
+        <h2>S/.{{pedido.monto}}</h2>
     </div>
-    <button (click)="redirigir()">Volver</button>
+    <br>
+    <div style="text-align: center;">
+        <button class="boton-simple" (click)="redirigir()">Volver</button>
+    </div>
 </div>

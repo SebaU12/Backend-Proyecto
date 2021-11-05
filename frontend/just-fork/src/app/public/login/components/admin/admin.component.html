@@ -1,6 +1,8 @@
 <app-nav></app-nav>
+
+
 <div *ngIf="isLogVisible">
-    <h2>Login</h2>
+    <h2>Login</h2><br>
     <div *ngIf="isLogVisible" class="cobertor-seccion-login">
         <div class="tabla-login-admin">
             <h3>Formulario Admin</h3>
@@ -20,7 +22,7 @@
 
 
 <div *ngIf="!isLogVisible">
-    <h2>Register</h2>
+    <h2>Register</h2><br>
     <div *ngIf="!isLogVisible" class="cobertor-seccion-register">
         <div class="tabla-register-admin">
             <h3>Formulario Registro Admin</h3>
