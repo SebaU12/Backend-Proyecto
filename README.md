@@ -68,28 +68,28 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 - Usuario: `utec`
 - Clave: `1234567890`
 3. Ejecutar el script de inicialización de la DB: `CREATE DATABASE just_fork`
-4. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
+4. Entrar al archivo `config.json`, ubicado en la carpeta  `backend/config/`
 5. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
 6. ingresar el comando `npx sequelize-cli db:migrate`
 
 ### Backend
-
-1. Instalar dependencias
+1. Ingresar a la carpeta `backend/`
+2. Instalar dependencias
 ```
 npm install
 npm install -g nodemon
 ```
-2. Iniciar el proyecto
+3. Iniciar el proyecto
 
 `npm start`
 
 ### Frontend
-
-1. Instalar dependencias
+1. Ingresar a la carpeta `frontend/just_fork`
+2. Instalar dependencias
 
 `npm install`
 
-2. Iniciar el proyecto
+3. Iniciar el proyecto
 
 `ng serve --open`
 
