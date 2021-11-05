@@ -55,21 +55,21 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 ### Base de datos
 #### Primera forma
 1. Abrir MySQL
-2. Ejecutar el script de inicialización de la DB: `source just_fork.mysql`
-3. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
-4. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
-5. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
+2. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
 - Usuario: `utec`
 - Clave: `1234567890`
+3. Ejecutar el script de inicialización de la DB: `source just_fork.mysql`
+4. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
+5. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
 
 #### Segunda forma
 1. Abrir MySQL
-2. Ejecutar el script de inicialización de la DB: `CREATE DATABASE just_fork`
-3. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
-4. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
-5. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
+2. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
 - Usuario: `utec`
 - Clave: `1234567890`
+3. Ejecutar el script de inicialización de la DB: `CREATE DATABASE just_fork`
+4. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
+5. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
 6. ingresar el comando `npx sequelize-cli db:migrate`
 
 ### Backend
