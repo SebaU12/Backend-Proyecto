@@ -26,6 +26,7 @@ export class NavComponent implements OnInit {
         this.getPermissionUser(); 
         let timerId = setInterval(() => {
             if(this.notlog == true){
+                console.log("asd")
                 this.visible = true; 
                 
                 clearInterval (timerId)

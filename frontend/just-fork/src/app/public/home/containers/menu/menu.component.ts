@@ -56,23 +56,27 @@ export class MenuComponent implements OnInit {
     }
 
     canBuy(){
-        this.visual = false; 
         const value: string = this.cookieService.get('token');
         if(!value){
             var opcion = confirm("Al parecer no estar registrado o no estar logeado, ¿quieres hacerlo?")
             if(opcion == true)window.location.href= window.location.origin + "#/auth"; 
         } else {
-            this.monto = Math.round((this.monto + Number.EPSILON) * 100) / 100;
-            this.result_pedido = {
-                monto: this.monto,
-                pedidosId: this.pedido,
-                restaurantId: this.restaurantId,
+            if(this.cantidad == 0){
+                alert("No puede comprar, ya que no selecciono producto")
+            } else {
+                this.visual = false; 
+                this.monto = Math.round((this.monto + Number.EPSILON) * 100) / 100;
+                this.result_pedido = {
+                    monto: this.monto,
+                    pedidosId: this.pedido,
+                    restaurantId: this.restaurantId,
+                }
+                this.dividir = this.pedido; 
+                this.lista = Array.from(this.dividir); 
+                this.lista.sort(); 
+                this.visualCompra = false; 
+                this.showPedidos(); 
             }
-            this.dividir = this.pedido; 
-            this.lista = Array.from(this.dividir); 
-            this.lista.sort(); 
-            this.visualCompra = false; 
-            this.showPedidos(); 
         }
     }
 
