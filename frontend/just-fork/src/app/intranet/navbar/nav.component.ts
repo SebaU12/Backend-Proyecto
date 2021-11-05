@@ -18,7 +18,7 @@ export class NavComponentIntra implements OnInit {
     adminLog: boolean = false;  
     userName: string = ""; 
     notlog: boolean = false; 
-
+    //Funct
 
     constructor(private intranetService: IntranetService, private cookieService: CookieService) {}
 
