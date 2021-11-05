@@ -66,7 +66,7 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 
 ### Backend
 1. Ingresar a la carpeta `backend/`
-2. Instalar dependencias
+2. Instalar dependencias, aunque tenga instalado nodemon se recomienda ejecutar el comando mostrado
 ```
 npm install
 npm install -g nodemon
