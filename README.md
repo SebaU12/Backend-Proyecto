@@ -30,7 +30,7 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 | `/menu/:id` | `GET /menu/+idr+/+idm` | Realiza la busqueda de un menu especifico usando la id del restaurante (idr) y el id del menu (idm) | 
 | `/admin/postR` | `POST /restaurants, data` | Realiza la creación de un restaurante | 
 | `/admin/postR` | `POST /images/upload, data` | Permite guardar una imagen | 
-| `/admin/patchR` | `POST /restaurants, data` | Realiza una actualización de la información del restaurante | 
+| `/admin/patchR` | `PATCH /restaurants, data` | Realiza una actualización de la información del restaurante | 
 | `/admin/patchR` | `POST /images/upload, data` | Permite guardar una imagen | 
 | `/admin/patchR` | `GET /restaurants/data/personal` | Adquiere la información del restaurante personal para agregarlo en el form de actualización |
 | `/admin/mis-pedidos` | `GET /pedido/user` | Recopila todos los pedidos que hizo el usuario | 
@@ -38,11 +38,11 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 | `/admin/mis-pedidos` | `GET /pedido/user/+id` | Ver información detallada del un pedido | 
 | `/admin/mis-menus` | `POST /menu, data` | Permite crear un nuevo menu | 
 | `/admin/mis-menus` | `GET /menu/+id` | Ver los menus que tiene el restaurante | 
-| `/admin/patch-menus/:id` | `POST /menu/+id` | Actualiza la información de un menu | 
+| `/admin/patch-menus/:id` | `PATCH /menu/+id` | Actualiza la información de un menu | 
 | `/admin/patch-menus/:id` | `DELETE /menu/+id` | Elimina la información del menu especifico | 
 | `/admin/mostrar-pedido/:id` | `GET /menu/+idr+/+idm` | Realiza la busqueda de un menu especifico usando la id del restaurante (idr) y el id del menu (idm) |
-| `/admin/user` | `POST /user/update, data` | Actualiza la información del usuario | 
-| `/admin/user` | `POST /user_admin/update, data` | Actualiza la información del admin | 
+| `/admin/user` | `PATCH /user/update, data` | Actualiza la información del usuario | 
+| `/admin/user` | `PATCH /user_admin/update, data` | Actualiza la información del admin | 
 | `/admin/user` | `DELETE /user/destroy` | Elimina la información de usuario | 
 | `/admin/user` | `DELETE /user_admin/destroy` | Elimina la información de admin | 
 | `/admin/my-restaurant` | `GET /user_admin/resId` | Consigue la id del restaurante | 
