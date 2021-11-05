@@ -58,7 +58,7 @@ Ante el aumento de uso de aplicaciones como Rappi, Fazil, entre otras, se desarr
 2. (Opcional) si se desea no ingresar su usario y contraseña, entonces crear una cuenta en mysql con los siguientes datos:
 - Usuario: `utec`
 - Clave: `1234567890`
-3. Ejecutar el script de inicialización de la DB: `source just_fork.mysql`
+3. Ejecutar los comandos ubicados en `just_fork.sql`
 4. Entrar al archivo `config.json`, ubicado en la `carpeta backend/config/`
 5. En "username": Su_usuario, "password": "Su_contraseña", "database": "just_fork"
 
